@@ -1,1 +1,42 @@
+<div id="title-container">
+  <h1>Schandry Task</h1>
+</div>
+<div id="subject-id-prompt">
+  <input type="text" id="subject-id-input" placeholder="Enter Subject ID">
+  <button id="subject-id-submit">Submit ID</button>
+
+</div>
+<div id="trial-label" style="position: fixed; bottom: 10px; right: 10px; font-size: 16px;"></div>
+
+<p id="instructions"><strong>Instructions:</strong> Breathe normally and try and sense your heart beating without taking your pulse. You can close your eyes if you prefer. For each trial, when you are prompted to "Start" begin counting each heartbeat you feel. When you are prompted to "Stop", input the number of beats you counted. Do not guess how many heart beats you think are occurring, rather respond to how many you can actually feel. If you cannot feel your heartbeat enter '0'. In between trials you will be asked to state how confident you are in your answer.</p>
+<p id="confirmation-message" style="display: none;"></p>
+
+<button id="start-task-button"style="display: none;">Start Task</button>
+
+<button id="instructions-audio-button">Instructions Audio</button></p>
+<audio id="instructions-audio" src="https://assets.codepen.io/11796151/Breathe+normally+and+%282%29.mp3" preload="auto"></audio>
+<audio id="beep-sound" src="https://assets.codepen.io/11796151/beep-07a.mp3" preload="auto"></audio>
+
+  <p id="trial-info"></p>
+  <p id="start-stop-prompt" style="display:none;"></p>
+  <div id="input-container" style="display:none;">
+    <input type="text" id="value-input" placeholder="Enter your value here">
+    <button id="submit-value">Submit</button>
+  </div>
+  <button id="record-response-button" style="display:none;">Record Response</button>
+
+  <div id="confidence-scale-container" style="display:none;">
+    <label id="response-label" for="confidence-scale" style="text-align: center; display: block; font-size: 16px; font-weight: bold; font-family: Arial, sans-serif; margin-bottom: 20px;">
+      How confident are you that your previous response is accurate?
+    </label>
+    <div style="display: flex; justify-content: space-between;">
+      <span id="slider-text" style="margin-right: -100px; margin-top: -10px; font-size: 16px; font-family: Arial, sans-serif;">Not at all confident</span>
+      <input type="range" id="confidence-scale" min="=5" max="100" step="1">
+      <span id="anchor-text" style="margin-left: 0px; margin-top: -10px;font-size: 16px; font-family: Arial, sans-serif;">Extremely confident</span>
+    </div>
+    <button id="submit-confidence">Submit Response</button>  </div>
+  <audio id="trial-start-audio" src="https://assets.codepen.io/11796151/Start+%281%29.mp3" preload="auto"></audio>
+<audio id="trial-end-audio" src="https://assets.codepen.io/11796151/Stop+How+many+heart+.mp3" preload="auto"></audio>
+<audio id="ding-sound" src="https://assets.codepen.io/11796151/ding+%283%29.mp3" preload="auto"></audio>
+<p id="validation-message" style="color: red; display: none;">Please enter a valid number.</p>
 
