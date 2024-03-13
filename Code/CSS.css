@@ -1,0 +1,249 @@
+    body {
+      font-family: Arial, sans-serif;
+    }
+    input[type="range"] {
+      display: block;
+      width: 100%;
+      background-color: transparent;
+      -webkit-appearance: none;
+      height: 10px;
+      position: relative;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      background-color: black;
+      cursor: pointer;
+      border-radius: 50%;
+      border: 1px solid black;
+      margin-top: -6px;
+      position: relative;
+      z-index: 1;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      border: none;
+      height: 1.5px;
+      background: black;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input[type="range"]::before,
+    input[type="range"]::after {
+      content: "";
+      position: absolute;
+      height: 14px;
+      width: 2px;
+      background-color: black;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input[type="range"]::before {
+      left: 0;
+    }
+
+    input[type="range"]::after {
+      right: 0;
+    }
+
+    input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 5px;
+      background-color: lightgray;
+      border-radius: 10px;
+      outline: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      background-color: black;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-top: -5.5px;
+    }
+
+    input[type=range]::-moz-range-thumb {
+      width: 12px;
+      height: 12px;
+      background-color: black;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-top: -6px;
+    }
+
+#instructions {
+  display: none; /* This line should hide the instructions initially */
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-top: 10px; /* Add space above the instructions */
+  padding: 5px 0; /* Add some padding for visual comfort */
+  text-align: left;
+}
+#validation-message {
+  color: red;
+  display: none; /* Keep your existing display rule, it's controlled via JavaScript */
+  text-align: center; /* Center-align the text */
+  width: 100%; /* Set a width; adjust as needed */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+    #confidence-scale-container,
+    #trial-label,
+    #response-label,
+    #confirmation-message,
+    #next-trial-button {
+      display: none;
+    }
+#title-container h1 {
+  text-align: center;
+  font-size: 20px; /* Adjust this value as needed */
+  margin: auto;
+  padding: 20px 0; /* Adjusts spacing around the title for aesthetic balance */
+
+}
+#subject-id-prompt {
+  text-align: center; 
+  margin: auto;
+}
+#trial-info {
+text-align: center; 
+  width: 100%; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding: 10px 0; 
+  font-size: 20px; /* Adjust the font size as needed */
+
+}
+    #confidence-scale-container {
+display: flex;
+  align-items: center; /* Aligns items vertically in the center, if needed */
+     text-align: center;
+  width: 500px;
+  margin-left: auto; /* Adjust or remove if using absolute positioning */
+  margin-right: auto;
+  margin-bottom: 30px;
+  position: relative; /* Add this line to position the container absolutely */
+    }
+
+    #confidence-scale {
+  margin-left: 100px; /* Adjust as needed to move more to the right */
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    #record-response-button {
+      font-size: 16px;
+      padding: 5px 10px;
+      display: inline-block;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    #confirmation-message {
+      display: none;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: 10px;
+      color: green;
+    }
+
+    #next-trial-button {
+      display: none;
+      font-size: 18px;
+      margin-top: 10px;
+      margin-left: 185px;
+      margin-right: auto;
+      padding: 5px 10px;
+    }
+
+    #response-label {
+      display: block;
+      font-size: 18px; 
+
+    }
+
+    #trial-label {
+      font-size: 18px;
+      margin-top: 0px;
+      margin-left: 0px;
+      display: block;
+    }
+#input-container {
+  text-align: center; 
+  display: flex; /* Use flexbox to center child elements */
+  justify-content: center; /* Horizontally center the flex items */
+  align-items: center; /* Vertically center the flex items (if needed) */
+  width: 100%; /* Ensure it takes the full width */
+  margin: auto; /* Center the container itself if it has a specific width */
+}
+
+    #subject-id-container {
+      position: absolute;
+      top: 10px;
+      left: 200;
+      right: auto;
+      display: center;
+    }
+
+    #subject-id-label {
+      margin-right: 5px;
+      margin-top: 10px;
+    }
+
+    #subject-id {
+      width: 50px;
+      font-size: 16px;
+    }
+#start-stop-prompt {
+  text-align: center; /* Centers the text inside the element */
+  width: 100%; /* Ensure it spans the full width of its container */
+  margin: auto; /* Center the element itself if it's a block element with a specified width */
+  display: block; /* Make sure it's a block-level element to respect width and margin */
+  padding: 10px 0; /* Optional: Adds some vertical space for aesthetic balance */
+}
+
+   #start-task-button {
+  font-size: 16px; /* Slightly larger text */
+  padding: 10px 20px; /* Increase button size */
+  background-color: darkgreen; /* Dark green background */
+  color: white; /* White text */
+  display: inline-block; /* Adjust display to make padding effective */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor on hover */
+  margin-top: 20px; /* Add some space above the button */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+#start-task-button:hover {
+  background-color: #4CAF50;
+}
+  #instructions-audio-button {
+font-size: 16px; /
+    padding: initial; /* Match default button padding */
+    margin-top: -10px; 
+    /* Remove the absolute positioning to allow it to flow in the document */
+    position: static; /* Adjust this to 'static' to let it follow normal document flow */
+    top: auto;
+    left: auto;
+  margin-left: 400px; /* Adjust the value as needed */
+    display: none; /* Initially hide these elements */
+
+
+}
